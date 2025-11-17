@@ -32,5 +32,5 @@ A full-stack employee management app built using **Spring Boot**, **Thymeleaf**,
 ### Add Employee Form
 ![Add Employee](screenshots/add-employee.png)
 
-### Delete Employee Page
+### Delete Employee
 ![Delete Employee](screenshots/delete-employee.png)
