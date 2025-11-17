@@ -23,3 +23,14 @@ A full-stack employee management app built using **Spring Boot**, **Thymeleaf**,
 - MySQL
 - Hibernate
 - Spring Validation  
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home-page.png)
+
+### Add Employee Form
+![Add Employee](screenshots/add-employee.png)
+
+### Delete Employee Page
+![Delete Employee](screenshots/delete-employee.png)
