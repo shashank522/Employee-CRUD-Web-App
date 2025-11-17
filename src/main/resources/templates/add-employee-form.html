@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h3>Employee Directory</h3>
+  <hr>
+  <p class="h4 m3">Add a new Employee</p>
+  <form action="#" th:action="@{/employees/save}" th:object="${employee}" method="POST">
+    <!--Add a hidden input field for id,to handle form updates-->
+    <input type="hidden" th:field="*{id}"/>
+    <input type="text" th:field="*{firstName}" placeholder="First Name" class="form-control mb-4 w-25"/>
+    <input type="text" th:field="*{lastName}" placeholder="Last Name" class="form-control w-25"/>
+    <span th:if="${#fields.hasErrors('lastName')}"
+          th:errors="*{lastName}"
+          class="text-danger mb-2"></span>
+    <input type="text" th:field="*{email}" placeholder="Email" class="form-control mt-4 w-25"/>
+    <span th:if="${#fields.hasErrors('email')}"
+          th:errors="*{email}"
+          class="text-danger d-block mt-1 mb-2"></span>
+    <button type="submit" class="btn btn-info btn-sm col-2 mt-4">Save</button>
+  </form>
+  <a th:href="@{/employees/list}">Back to Employees list</a>
+</div>
+</body>
+</html>
